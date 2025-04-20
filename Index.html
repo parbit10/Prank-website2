@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hacked!</title>
+  <style>
+    body {
+      background: black;
+      color: green;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 20px;
+    }
+    #output {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>System Breach Initiated...</h1>
+  <div id="output">Loading...</div>
+
+  <script>
+    const lines = [
+      "Connecting to dark web...",
+      "Accessing secure database...",
+      "Uploading tracking virus...",
+      "Encrypting system files...",
+      "Done.",
+      "Self-destruct in 3...",
+      "2...",
+      "1...",
+      "Just kidding! You’ve been pranked!"
+    ];
+    let i = 0;
+    const output = document.getElementById("output");
+    const interval = setInterval(() => {
+      if (i < lines.length) {
+        output.innerText += "\n" + lines[i];
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
